@@ -1,0 +1,85 @@
+.Window {
+  display: block; /* Default display mode */
+  position: absolute;
+  width: 250px;
+  padding: 3px;
+  font-weight: 200;
+  color: var(--ui-component-text-color);
+  background-color: var(--ui-main-color);
+  border-top: 1px solid #c3c7cb;
+  border-left: 1px solid #c3c7cb;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #868a8e;
+}
+
+.Window-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.win95-well-border {
+  border-top: 1px solid var(--ui-emboss-outer-shadow-color);
+  border-left: 1px solid var(--ui-emboss-outer-shadow-color);
+  border-right: 1px solid var(--ui-main-color);
+  border-bottom: 1px solid var(--ui-main-color);
+  box-shadow: -1px -1px 0 var(--ui-emboss-inner-shadow-color), -1px 0 0 var(--ui-emboss-inner-shadow-color), 0 -1px 0 0 var(--ui-emboss-inner-shadow-color), 1px 0 0 var(--ui-emboss-highlight-color), 1px 1px 0 var(--ui-emboss-highlight-color), 0 1px 0 var(--ui-emboss-highlight-color);
+}
+
+.win95-emboss-border {
+  border-top: 1px solid var(--ui-main-color);
+  border-left: 1px solid var(--ui-main-color);
+  border-right: 1px solid var(--ui-emboss-outer-shadow-color);
+  border-bottom: 1px solid var(--ui-emboss-outer-shadow-color);
+  box-shadow: inset 1px 1px 0 0 var(--ui-emboss-highlight-color), inset -1px -1px 0 0 var(--ui-emboss-inner-shadow-color);
+}
+
+.win95-depressed-border {
+  border-top: 1px solid var(--ui-emboss-outer-shadow-color);
+  border-left: 1px solid var(--ui-emboss-outer-shadow-color);
+  border-bottom: 1px solid var(--ui-emboss-inner-shadow-color);
+  border-right: 1px solid var(--ui-emboss-inner-shadow-color);
+  box-shadow: inset 1px 1px 0 0 var(--ui-emboss-inner-shadow-color), 1px 1px 0 0 var(--ui-emboss-outer-shadow-color), 1px 0 0 0 var(--ui-emboss-outer-shadow-color), 0 1px 0 0 var(--ui-emboss-outer-shadow-color);
+}
+
+.Window-main {
+  height: calc(100% - 38px);
+}
+
+.frame {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  margin-bottom: 8px;
+  background-color: white;
+  padding: 8px;
+
+}
+
+.content {
+  width: 100%;
+  user-select: text !important;
+  font-family: 'Times New Roman', serif;
+  font-size: 16px;
+}
+
+.content p:first-child {
+  margin-top: 0;
+}
+  
+.content p:last-child {
+  margin-bottom: 0;
+}
+
+textarea {
+/*   @include win95-well-border; */
+  width: 400px;
+  height: 150px;
+  padding: 8px;
+}
+
+textarea:focus {
+  outline: none;
+}
